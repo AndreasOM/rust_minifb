@@ -411,9 +411,11 @@ impl Window {
 
     #[inline]
     pub fn get_position(&self) -> (isize, isize) {
-        let ( mut x, mut y ) = ( 0, 0 );
-        unsafe { mfb_get_position(self.window_handle, &mut x, &mut y ); }
-        ( x as isize, y as isize )
+        let (mut x, mut y) = (0, 0);
+        unsafe {
+            mfb_get_position(self.window_handle, &mut x, &mut y);
+        }
+        (x as isize, y as isize)
     }
 
     #[inline]

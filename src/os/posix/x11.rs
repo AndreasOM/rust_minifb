@@ -659,13 +659,13 @@ impl Window {
 
     #[inline]
     pub fn get_position(&self) -> (isize, isize) {
-        let ( mut x, mut y ) = ( 0, 0 );
+        let (mut x, mut y) = (0, 0);
 
         unsafe {
             todo!("get_position");
         }
 
-        ( x as isize, y as isize )
+        (x as isize, y as isize)
     }
 
     #[inline]

@@ -648,13 +648,13 @@ impl Window {
     }
 
     pub fn get_position(&self) -> (isize, isize) {
-        let ( mut x, mut y ) = ( 0, 0 );
+        let (mut x, mut y) = (0, 0);
 
         unsafe {
             todo!("get_position");
         }
-        
-        ( x as isize, y as isize )
+
+        (x as isize, y as isize)
     }
 
     pub fn set_rate(&mut self, rate: Option<Duration>) {

@@ -647,7 +647,7 @@ impl Window {
 
     #[inline]
     pub fn get_position(&self) -> (isize, isize) {
-        let ( mut x, mut y ) = ( 0, 0 );
+        let (mut x, mut y) = (0, 0);
 
         unsafe {
             let mut rect = windef::RECT {
@@ -656,18 +656,13 @@ impl Window {
                 top: 0,
                 bottom: 0,
             };
-            if winuser::GetWindowRect(
-                self.window.unwrap(),
-                &mut rect
-            ) != 0 {
+            if winuser::GetWindowRect(self.window.unwrap(), &mut rect) != 0 {
                 x = rect.left;
                 y = rect.top;
             }
         }
-        ( x as isize, y as isize )
+        (x as isize, y as isize)
     }
-
-
 
     #[inline]
     pub fn topmost(&self, topmost: bool) {
